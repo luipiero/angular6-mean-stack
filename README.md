@@ -1,1 +1,1 @@
-# angular6-mean-task
+# angular6-mean-stack
