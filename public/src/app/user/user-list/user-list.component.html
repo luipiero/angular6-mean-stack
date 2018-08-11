@@ -1,0 +1,29 @@
+<h3>User list component</h3>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">NAME</th>
+      <th scope="col">FIRST</th>
+      <th scope="col">LAST</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <th scope="row">{{user._id}}</th>
+      <td> {{user.first_name}} </td>
+      <td> {{user.last_name}} </td>
+      <td> {{user.email}} </td>
+      <td>
+        <button class="btn btn-danger" (click)="destroy(user)">
+          Delete
+        </button>
+        <button class="btn btn-success" (click)="onSelectUser(user)">
+          Update
+        </button>
+      </td>
+      </tr>
+  </tbody>
+</table>
+<app-user-edit *ngIf="mostrar" [user]="selectUser" (updateUserEvent)="update($event)"></app-user-edit>
