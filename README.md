@@ -1,1 +1,5 @@
-# angular6-mean-stack
+se ha usado
++angular
++node
++express
++mongo
